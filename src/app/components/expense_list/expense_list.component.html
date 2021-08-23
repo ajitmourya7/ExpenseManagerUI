@@ -1,0 +1,16 @@
+<div>
+  <div class="card card-shadowed px-40" style="max-width: 100%; ">
+    <div class="logoContainer">
+      Expense List
+    </div>
+    <br>
+    <ul>
+      <div *ngIf="show">
+        <li *ngFor="let expense of expense_list">
+          Amount: {{ expense.amount }}, Description {{ expense.description }},
+          Expense type: {{ expense.expense_type }}, Category: {{ expense.category }}
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<aside class=" sidebar sidebar-icons-right sidebar-expand-lg sidebarcustom"
+       style="background-color: #4b525d">
+  <nav class="sidebar-navigation mt-40">
+    <ul class="menu mt-md-3">
+      <li class="menu-category">Menu</li>
+      <li class="menu-item sidebar-toggler">
+        <a class="menu-link cursor-pointer" (click)="add_category()">
+          <span class="title">Add Category</span>
+          <i class="fas fa-plus"></i>
+        </a>
+      </li>
+      <li class="menu-item sidebar-toggler">
+        <a class="menu-link cursor-pointer" (click)="category_list()">
+          <span class="title">Category List</span>
+          <i class="fas fa-list"></i>
+        </a>
+      </li>
+      <li class="menu-item sidebar-toggler">
+        <a class="menu-link cursor-pointer" (click)="add_expense()">
+          <span class="title">Add Expense</span>
+          <i class="fas fa-plus"></i>
+        </a>
+      </li>
+      <li class="menu-item sidebar-toggler">
+        <a class="menu-link cursor-pointer" (click)="expense_list()">
+          <span class="title">Expense List</span>
+          <i class="fas fa-list"></i>
+        </a>
+      </li>
+      <li class="menu-item sidebar-toggler">
+        <a class="menu-link cursor-pointer" (click)="logout()">
+          <span class="title">Logout</span>
+          <i class="fas fa-sign-out-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<main class="main-container">
+  <header class="header no-border shadow-material-1">
+    <div class="header-bar">
+      <span class="header-bar" style="border: #ffffff">
+        <p class="fs-18 text-fade"><i class="far fa-file-alt mr-1 text-fade"></i> Home </p>
+        <p>
+          <span class="text-fader fw-400 fs-14"> <i class="fas fa-user-circle mr-1"></i>  {{userName}}</span>
+        </p>
+      </span>
+    </div>
+
+
+  </header>
+  <router-outlet></router-outlet>
+</main>
+<ng-template #loadingModal>
+  <div class="modal-body text-center">
+    <h4><i class="fas fa-spinner fa-spin"></i></h4>
+    <h4>{{loadingMessage}}</h4>
+  </div>
+</ng-template>
+

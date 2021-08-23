@@ -1,0 +1,34 @@
+export class Material {
+  basic_rate: number;
+  cgst: any;
+  commission: any;
+  division: any;
+  distribution_channel: string;
+  drf_log: any;
+  freight_charges: any;
+  freight_condition: string;
+  gst: number;
+  gst_value: number;
+  hd00: number;
+  idx_po: number;
+  igst: number;
+  margin: any;
+  material_code: number;
+  material_name: string;
+  order_type: any;
+  plant: any;
+  pmmt_id: number;
+  po_log: any;
+  qty: number;
+  sales_org: any;
+  sch_div_date: string;
+  sgst: number;
+  sub_status: string;
+  technical_approval: any;
+  uom: string
+  value: number;
+  zfrc: number;
+  sh: number;
+  sp: number;
+  address: string;
+}

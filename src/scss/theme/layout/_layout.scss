@@ -1,0 +1,18 @@
+
+.layout-chat {
+  height: 100vh;
+  padding-top: $height-topbar;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+
+  .main-content {
+    display: flex;        
+    height: 10%; // Don't know why, but it is required for footer to be visible.
+    flex: 1 0 auto;
+    -webkit-box-flex: 1;
+  }
+
+}

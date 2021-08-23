@@ -1,0 +1,15 @@
+<div>
+  <div class="card card-shadowed px-40" style="max-width: 100%; ">
+    <div class="logoContainer">
+      Category List
+    </div>
+    <br>
+    <ul>
+      <div *ngIf="show">
+        <li *ngFor="let category of category_list">
+          {{ category.name }}
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>

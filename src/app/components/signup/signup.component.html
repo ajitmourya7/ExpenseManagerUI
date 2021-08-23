@@ -1,0 +1,29 @@
+<div class="h-fullscreen center-vh">
+  <div class="card card-shadowed px-40 py-50 w-400px" style="max-width: 100%">
+    <div class="logoContainer">
+    </div>
+    <br>
+
+    <form class="form-type-line mt-25" [formGroup]="loginForm" (ngSubmit)="signup()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" formControlName="username">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" formControlName="password">
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Password</label>
+        <input type="password" class="form-control" id="confirm_password" name="confirm_password" formControlName="confirm_password">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-bold btn-block btn-primary" type="submit">Login</button>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="err">
+        {{errMessage}}
+      </div>
+    </form>
+  </div>
+</div>

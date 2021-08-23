@@ -1,0 +1,57 @@
+<div class="main-content">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-sm-12 ">
+      <div class="card shadow-material-1 cardStyle">
+        <div class="card-body">
+          <div class="p-2" style="border-bottom: 1px dashed #d1d1d1;">
+            <p class="text-left fs-30 text-muted"> Add <span class="text-primary">Expense</span></p>
+          </div>
+
+          <div class="p-2">
+            <form [formGroup]="formGroup" class="form-type-line">
+              <div class="row gap-y gap-2 ">
+                <div class="form-group col-md-6">
+                  <label for="amount" class="col-form-label">Amount. <span class="text-danger fs-16">*</span></label>
+                  <input type="number" class="form-control" id="amount" formControlName="amount" placeholder="Amount">
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="expense_type" class="col-form-label">Expense Type <span
+                      class="text-danger fs-16">*</span></label>
+                    <select class="form-control" formControlName="expense_type" id="expense_type">
+                      <option value="credit" selected>credit</option>
+                      <option value="debit">debit</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="descriptions" class="col-form-label">Descriptions</label>
+                  <input type="text" class="form-control" id="descriptions" formControlName="descriptions"
+                         placeholder="Descriptions">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="category" class="col-form-label">Type <span class="text-danger fs-16">*</span></label>
+                  <select class="form-control" formControlName="category" id="category">
+                    <option value='' disabled selected>Please select category</option>
+                    <option *ngFor="let u of category_list" [value]="u.id">{{u.name}}</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <footer class="card-footer flexbox flex-justified text-center m-0 p-0">
+          <button class="btn btn-primary fw-500 fs-16 p-10 m-0 formButton" (click)="submit()"> Submit <i
+            class="ti-arrow-right ml-2 fs-9"></i></button>
+        </footer>
+        <div class="alert alert-success" role="alert" *ngIf="succ">
+          {{errMessage}}
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="err">
+          {{errMessage}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
